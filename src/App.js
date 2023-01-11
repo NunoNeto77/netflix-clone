@@ -8,7 +8,7 @@ import FeaturedMovie from "./components/FeaturedMovie/FeaturedMovie";
 function App() {
 
   const [movieList, setMovieList] = useState([]);
-  const [featuredData, setFeaturedData] = useState([null]);
+  const [featuredData, setFeaturedData] = useState(null);
 
   useEffect(() => {
     const loadAll = async () => {
