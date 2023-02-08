@@ -3,12 +3,14 @@ import './App.css';
 import api from "./api"; 
 import MovieRow from "./components/MovieRow/MovieRow";
 import FeaturedMovie from "./components/FeaturedMovie/FeaturedMovie";
+import Header from "./components/Header/Header";
 
 
 function App() {
 
   const [movieList, setMovieList] = useState([]);
   const [featuredData, setFeaturedData] = useState(null);
+  const [blackHeader, setBlackHeader] = useState(false);
 
   useEffect(() => {
     const loadAll = async () => {
@@ -26,11 +28,27 @@ function App() {
     loadAll();
   }, []);
 
+  useEffect(() => {
+    const scrollListener = () => {
+      if (window.scrollY > 10) {
+        setBlackHeader(true);
+      } else {
+        setBlackHeader(false);
+      }
+    }
+
+    window.addEventListener("scroll", scrollListener);
+    return () => {
+      window.removeEventListener("scroll", scrollListener);
+    }
+  }, []);
+
+
   return (
     <div className="page">
-      {featuredData && 
-        <FeaturedMovie item={featuredData}/> 
-      }
+      <Header black={blackHeader} />
+
+      {featuredData && <FeaturedMovie item={featuredData} />}
       <section className="lists">
         {movieList.map((item, key) => (
           <MovieRow key={key} title={item.title} items={item.items} />
