@@ -54,6 +54,12 @@ function App() {
           <MovieRow key={key} title={item.title} items={item.items} />
         ))}
       </section>
+
+      <footer>
+        Made with <span role="img" aria-label="heart">❤️</span> by Nuno Neto <br/>
+        Image rights for Netflix <br/>
+        Data taken from the website Themoviedb.org
+      </footer>
     </div>
   );
 }
