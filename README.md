@@ -1,3 +1,9 @@
+![netflix-clone-first-image](../assets/netflix-clone-first-image.png?raw=true)
+![netflix-clone-second-image](../assets/netflix-clone-second-image.png?raw=true)
+![netflix-clone-third-image](../assets/netflix-clone-third-image.png?raw=true)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
