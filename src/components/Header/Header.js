@@ -15,7 +15,7 @@ const Header = ({ black }) => {
       <div className="header--user">
         <a href="/">
           <img
-            src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png"
+            src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-512.png"
             alt="user-logo"
           />
         </a>
