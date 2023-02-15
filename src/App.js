@@ -46,6 +46,16 @@ function App() {
 
   return (
     <div className="page">
+
+      {movieList.length <= 0 && (
+        <div className="loading">
+          <img
+            src="https://rchandru.com/images/portfolio/loading.gif"
+            alt="loading"
+          />
+        </div>
+      )}
+      
       <Header black={blackHeader} />
 
       {featuredData && <FeaturedMovie item={featuredData} />}
@@ -56,8 +66,12 @@ function App() {
       </section>
 
       <footer>
-        Made with <span role="img" aria-label="heart">❤️</span> by Nuno Neto <br/>
-        Image rights for Netflix <br/>
+        Made with{" "}
+        <span role="img" aria-label="heart">
+          ❤️
+        </span>{" "}
+        by Nuno Neto <br />
+        Image rights for Netflix <br />
         Data taken from the website Themoviedb.org
       </footer>
     </div>
